@@ -1,0 +1,116 @@
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<owl:ObjectProperty rdf:ID="имеет_параметр" />
+	<owl:ObjectProperty rdf:ID="имеет_следствие" />
+	<owl:ObjectProperty rdf:ID="имеет_часть" />
+	<owl:ObjectProperty rdf:ID="имеет_результат_операции" />
+	<owl:ObjectProperty rdf:ID="имеет_субъект_операции" />
+	<owl:Class rdf:ID="кокосовая_пальма">
+		<rdfs:subClassOf rdf:resource="#пальма" />
+	</owl:Class>
+	<owl:Class rdf:ID="каштан">
+		<rdfs:subClassOf rdf:resource="#дерево" />
+	</owl:Class>
+	<owl:Class rdf:ID="вырубка_деревьев" />
+	<owl:ObjectProperty rdf:ID="вырубка_деревьев_имеет_субъект_операции_лесоруб">
+		<rdfs:subPropertyOf rdf:resource="#имеет_субъект_операции" />
+		<rdfs:domain rdf:resource="#вырубка_деревьев" />
+		<rdfs:range rdf:resource="#лесоруб" />
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="пузыри" />
+	<owl:Class rdf:ID="суп" />
+	<owl:ObjectProperty rdf:ID="суп_имеет_параметр_вкус">
+		<rdfs:subPropertyOf rdf:resource="#имеет_параметр" />
+		<rdfs:domain rdf:resource="#суп" />
+		<rdfs:range rdf:resource="#вкус" />
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="кальциевый_осадок" />
+	<owl:Class rdf:ID="финиковая_пальма">
+		<rdfs:subClassOf rdf:resource="#пальма" />
+	</owl:Class>
+	<owl:Class rdf:ID="древесина" />
+	<owl:ObjectProperty rdf:ID="древесина_имеет_параметр_плотность">
+		<rdfs:subPropertyOf rdf:resource="#имеет_параметр" />
+		<rdfs:domain rdf:resource="#древесина" />
+		<rdfs:range rdf:resource="#плотность" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="древесина_имеет_параметр_твердость">
+		<rdfs:subPropertyOf rdf:resource="#имеет_параметр" />
+		<rdfs:domain rdf:resource="#древесина" />
+		<rdfs:range rdf:resource="#твердость" />
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="вкус" />
+	<owl:Class rdf:ID="высокое_содержание_кальция" />
+	<owl:ObjectProperty rdf:ID="высокое_содержание_кальция_имеет_следствие_кальциевый_осадок">
+		<rdfs:subPropertyOf rdf:resource="#имеет_следствие" />
+		<rdfs:domain rdf:resource="#высокое_содержание_кальция" />
+		<rdfs:range rdf:resource="#кальциевый_осадок" />
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="ель">
+		<rdfs:subClassOf rdf:resource="#дерево" />
+	</owl:Class>
+	<owl:Class rdf:ID="овощной_суп">
+		<rdfs:subClassOf rdf:resource="#суп" />
+	</owl:Class>
+	<owl:ObjectProperty rdf:ID="овощной_суп_имеет_часть_морковь">
+		<rdfs:subPropertyOf rdf:resource="#имеет_часть" />
+		<rdfs:domain rdf:resource="#овощной_суп" />
+		<rdfs:range rdf:resource="#морковь" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="овощной_суп_имеет_часть_капуста">
+		<rdfs:subPropertyOf rdf:resource="#имеет_часть" />
+		<rdfs:domain rdf:resource="#овощной_суп" />
+		<rdfs:range rdf:resource="#капуста" />
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="морковь" />
+	<owl:Class rdf:ID="ветви" />
+	<owl:Class rdf:ID="желтая_береза">
+		<rdfs:subClassOf rdf:resource="#дерево" />
+	</owl:Class>
+	<owl:Class rdf:ID="кипение_воды" />
+	<owl:ObjectProperty rdf:ID="кипение_воды_имеет_следствие_пузыри">
+		<rdfs:subPropertyOf rdf:resource="#имеет_следствие" />
+		<rdfs:domain rdf:resource="#кипение_воды" />
+		<rdfs:range rdf:resource="#пузыри" />
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="повар" />
+	<owl:Class rdf:ID="птица" />
+	<owl:Class rdf:ID="дерево" />
+	<owl:ObjectProperty rdf:ID="дерево_имеет_часть_ствол">
+		<rdfs:subPropertyOf rdf:resource="#имеет_часть" />
+		<rdfs:domain rdf:resource="#дерево" />
+		<rdfs:range rdf:resource="#ствол" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="дерево_имеет_часть_ветви">
+		<rdfs:subPropertyOf rdf:resource="#имеет_часть" />
+		<rdfs:domain rdf:resource="#дерево" />
+		<rdfs:range rdf:resource="#ветви" />
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="капуста" />
+	<owl:Class rdf:ID="зяблик">
+		<rdfs:subClassOf rdf:resource="#птица" />
+	</owl:Class>
+	<owl:Class rdf:ID="ствол" />
+	<owl:Class rdf:ID="плотность" />
+	<owl:Class rdf:ID="пальма">
+		<rdfs:subClassOf rdf:resource="#дерево" />
+	</owl:Class>
+	<owl:Class rdf:ID="красный_зяблик">
+		<rdfs:subClassOf rdf:resource="#зяблик" />
+	</owl:Class>
+	<owl:Class rdf:ID="лесоруб" />
+	<owl:Class rdf:ID="готовка_супа" />
+	<owl:ObjectProperty rdf:ID="готовка_супа_имеет_субъект_операции_повар">
+		<rdfs:subPropertyOf rdf:resource="#имеет_субъект_операции" />
+		<rdfs:domain rdf:resource="#готовка_супа" />
+		<rdfs:range rdf:resource="#повар" />
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:ID="готовка_супа_имеет_результат_операции_суп">
+		<rdfs:subPropertyOf rdf:resource="#имеет_результат_операции" />
+		<rdfs:domain rdf:resource="#готовка_супа" />
+		<rdfs:range rdf:resource="#суп" />
+	</owl:ObjectProperty>
+	<owl:Class rdf:ID="твердость" />
+	<owl:Class rdf:ID="ворона">
+		<rdfs:subClassOf rdf:resource="#птица" />
+	</owl:Class>
+</rdf:RDF>

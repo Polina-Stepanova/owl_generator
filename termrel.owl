@@ -1,0 +1,75 @@
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<owl:ObjectProperty rdf:ID="имеет_результат_операции" />
+	<owl:ObjectProperty rdf:ID="имеет_следствие" />
+	<owl:ObjectProperty rdf:ID="имеет_субъект_операции" />
+	<owl:ObjectProperty rdf:ID="имеет_параметр" />
+	<owl:ObjectProperty rdf:ID="имеет_часть" />
+	<owl:Class rdf:ID="высокое_содержание_кальция">
+		<имеет_следствие rdf:resource="#кальциевый_осадок" />
+	</owl:Class>
+	<owl:Class rdf:ID="красный_зяблик">
+		<rdfs:subClassOf rdf:resource="#зяблик" />
+	</owl:Class>
+	<owl:Class rdf:ID="капуста" />
+	<owl:Class rdf:ID="дерево">
+		<имеет_часть rdf:resource="#ствол" />
+		<имеет_часть rdf:resource="#ветви" />
+	</owl:Class>
+	<owl:Class rdf:ID="птица" />
+	<owl:Class rdf:ID="финиковая_пальма">
+		<rdfs:subClassOf rdf:resource="#пальма" />
+	</owl:Class>
+	<owl:Class rdf:ID="кальциевый_осадок" />
+	<owl:Class rdf:ID="ель">
+		<rdfs:subClassOf rdf:resource="#дерево" />
+	</owl:Class>
+	<owl:Class rdf:ID="зяблик">
+		<rdfs:subClassOf rdf:resource="#птица" />
+	</owl:Class>
+	<owl:Class rdf:ID="пузыри" />
+	<owl:Class rdf:ID="кокосовая_пальма">
+		<rdfs:subClassOf rdf:resource="#пальма" />
+	</owl:Class>
+	<owl:Class rdf:ID="лесоруб" />
+	<owl:Class rdf:ID="овощной_суп">
+		<rdfs:subClassOf rdf:resource="#суп" />
+		<имеет_часть rdf:resource="#морковь" />
+		<имеет_часть rdf:resource="#капуста" />
+	</owl:Class>
+	<owl:Class rdf:ID="суп">
+		<имеет_параметр rdf:resource="#вкус" />
+	</owl:Class>
+	<owl:Class rdf:ID="кипение_воды">
+		<имеет_следствие rdf:resource="#пузыри" />
+	</owl:Class>
+	<owl:Class rdf:ID="готовка_супа">
+		<имеет_субъект_операции rdf:resource="#повар" />
+		<имеет_результат_операции rdf:resource="#суп" />
+	</owl:Class>
+	<owl:Class rdf:ID="вкус" />
+	<owl:Class rdf:ID="каштан">
+		<rdfs:subClassOf rdf:resource="#дерево" />
+	</owl:Class>
+	<owl:Class rdf:ID="пальма">
+		<rdfs:subClassOf rdf:resource="#дерево" />
+	</owl:Class>
+	<owl:Class rdf:ID="морковь" />
+	<owl:Class rdf:ID="повар" />
+	<owl:Class rdf:ID="вырубка_деревьев">
+		<имеет_субъект_операции rdf:resource="#лесоруб" />
+	</owl:Class>
+	<owl:Class rdf:ID="ворона">
+		<rdfs:subClassOf rdf:resource="#птица" />
+	</owl:Class>
+	<owl:Class rdf:ID="твердость" />
+	<owl:Class rdf:ID="плотность" />
+	<owl:Class rdf:ID="ствол" />
+	<owl:Class rdf:ID="древесина">
+		<имеет_параметр rdf:resource="#плотность" />
+		<имеет_параметр rdf:resource="#твердость" />
+	</owl:Class>
+	<owl:Class rdf:ID="ветви" />
+	<owl:Class rdf:ID="желтая_береза">
+		<rdfs:subClassOf rdf:resource="#дерево" />
+	</owl:Class>
+</rdf:RDF>
